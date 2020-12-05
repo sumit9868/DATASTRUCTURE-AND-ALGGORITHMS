@@ -1,10 +1,11 @@
 #include <iostream>
 using namespace std;
+template<typename T>
 class pQueue
 {
 private:
     //2-D array of queues
-    int **P;
+    T **P;
     //array of front indexes
     int *F;
     //array of rear indexes
@@ -20,14 +21,14 @@ public:
     {
         this->pSize = p_size;
         this->qSize = q_size;
-        this->P = new int *[p_size];
+        this->P = new T *[p_size];
         this->F = new int[p_size];
         this->R = new int[q_size];
         for (int i = 0; i < p_size; i++)
         {
             F[i] = -1;
             R[i] = -1;
-            P[i] = new int[q_size];
+            P[i] = new T[q_size];
         }
     }
 
@@ -68,9 +69,9 @@ public:
         R[p] = rear;
     }
 
-    int remove(int p)
+    T remove(int p)
     {
-        int item;
+        T item;
         int front;
         int rear;
         front = F[p];
@@ -117,7 +118,7 @@ public:
 };
 int main()
 {
-    pQueue p_queue(5, 5);
+    pQueue<int>p_queue(5, 5);
     p_queue.add(2, 2);
     p_queue.add(2, 3);
     p_queue.add(2, 2);
