@@ -1,2 +1,5 @@
 FINAL450.xlsx
 *a.exe
+cpp\graph\AVL\arrayToAVL.cpp
+cpp\graph\heap\maxHeap.cpp
+cpp\graph\heap\minHeap.cpp
