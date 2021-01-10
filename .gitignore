@@ -4,3 +4,4 @@ cpp/graph/AVL/arrayToAVL.cpp
 cpp/graph/heap/maxHeap.cpp
 cpp/graph/heap/minHeap.cpp
 cpp/graph/RedBlackTree/arrayToRBTree.cpp
+*.class
